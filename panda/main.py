@@ -20,3 +20,32 @@ df2 = pd.DataFrame([
 print(df2)
 
 print(df1)
+
+print(pd.read_csv('data.csv'))
+df1.to_csv('data.csv')
+
+###pd.DataFrames.from_dict({})
+
+#####Cleaning Empty cells 
+
+#fillna and dropna
+
+
+##### Working with Duplicates
+# duplicates
+# drop_duplicates
+
+# df.drop_duplicates(
+#     subset=None,            # Which columns to consider 
+#     keep='first',           # Which duplicate record to keep
+#     inplace=False,          # Whether to drop in place
+#     ignore_index=False      # Whether to relabel the index
+# )
+
+
+sales = pd.read_csv('sales.csv')
+targets = pd.read_csv('targets.csv')
+print(sales.head())
+print(targets.head())
+sales_vs_targets = pd.merge(sales, targets)
+print(sales_vs_targets)
